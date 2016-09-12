@@ -6,8 +6,7 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-{{!-- The big featured header --}}
-<header class="main-header">
+<header class="main-header post-head">
 	<div class="main-nav">
 		<nav class="inner">
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
@@ -19,12 +18,6 @@
             </ul>
             {{/if}}
 		</nav>
-	</div>
-	<div class="main-header-content {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-		<hgroup class="inner">
-            <h1 class="page-title">{{@blog.title}}</h1>
-            <h2 class="page-description">{{@blog.description}}</h2>
-		</hgroup>
 	</div>
 </header>
 
