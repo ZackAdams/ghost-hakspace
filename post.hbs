@@ -6,16 +6,13 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<header class="main-header post-head">
+{{!-- The big featured header --}}
+<header class="main-header">
 	<div class="main-nav">
 		<nav class="inner">
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
             {{#if @blog.navigation}}
-			<ul class="nav-bar">
-                {{#foreach @blog.navigation}}
-                    <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-                {{/foreach}}
-            </ul>
+                {{navigation}}
             {{/if}}
 		</nav>
 	</div>
